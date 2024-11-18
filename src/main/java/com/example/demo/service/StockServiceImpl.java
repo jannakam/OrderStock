@@ -6,6 +6,8 @@ import com.example.demo.entity.StockEntity;
 import com.example.demo.repository.StockRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class StockServiceImpl implements StockService{
 
@@ -62,5 +64,10 @@ public class StockServiceImpl implements StockService{
             i.setQuantity(stock.getQuantity());
             repository.save(i);
         }
+    }
+
+    @Override
+    public List<StockEntity> getStocks() {
+        return repository.findAll();
     }
 }

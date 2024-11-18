@@ -18,7 +18,6 @@ public class UpdateStockResponse {
         this.item = item;
     }
 
-
     public String getStatus() {
         return status;
     }
